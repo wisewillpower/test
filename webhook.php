@@ -14,7 +14,7 @@ $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
 if ($signature) {
   $hash = "sha1=".hash_hmac('sha1', file_get_contents("php://input"), $secret);
   if (strcmp($signature, $hash) == 0) {
-    echo shell_exec("d: && cd {$path} && git reset --hard origin/master && git clean -f && git pull");
+    echo shell_exec("d: && cd {$path} && git reset --hard origin/master && git clean -f && git pull 2>&1");
     exit();
   }
 }
