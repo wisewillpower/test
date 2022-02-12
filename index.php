@@ -1,4 +1,4 @@
 <?php
-echo "index.php";
+echo "<h1>自动部署的开始...</h1>";
 ?>
 
